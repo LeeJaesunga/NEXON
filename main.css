@@ -1,3 +1,13 @@
+#closeMenu {
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+
 #header {
     min-width: 1007px;
     position: relative;
@@ -58,6 +68,53 @@
     line-height: 16px;
     color: #17191d;
 }
+
+/* slide_menu */
+
+.slide_menu {
+    position: fixed;
+    top: 0;
+    left: -300px; /* 왼쪽에 숨겨진 상태 */
+    width: 400px;
+    height: 100%;
+    left: 0;
+    width: 440px;
+    /* padding: 62px 0 195px; */
+    background-color: #f9f9f9;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  .slide_menu.active {
+    left: 0; /* 왼쪽에서 슬라이드 등장 */
+  }
+
+  .menu_content {
+    padding: 20px;
+  }
+
+
+/* overlay */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+  }
+  
+  .overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
 
 #header .header_right {
     position: absolute;

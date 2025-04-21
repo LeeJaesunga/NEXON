@@ -16,12 +16,21 @@
 
                 <div class="header_left">
                     <div class="header_buger">
-                        <a href="#">
+                        <a href="#" id="burgerBtn">
                             <span class="buger"></span>
                             <span class="menu">메뉴</span>
                         </a>
                     </div>
                 </div>
+
+                <div class="slide_menu" id="slideMenu">
+                    <div class="menu_content">
+                      <p>슬라이드 메뉴입니다.</p>
+                      <button id="closeMenu">닫기</button>
+                    </div>
+                  </div>
+                
+                  <div class="overlay" id="overlay"></div>
 
                 <div class="header_right">
                     <div class="icon_card"><a href="#"></a></div>
@@ -1221,5 +1230,38 @@
 
                     </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const burgerBtn = document.getElementById('burgerBtn');
+          const slideMenu = document.getElementById('slideMenu');
+          const closeMenu = document.getElementById('closeMenu');
+          const overlay = document.getElementById('overlay');
+      
+          // 메뉴 열기
+          burgerBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            slideMenu.classList.add('active');
+            overlay.classList.add('active');
+          });
+      
+          function closeSlideMenu() {
+            slideMenu.classList.remove('active');
+            overlay.classList.remove('active');
+          }
+      
+          closeMenu.addEventListener('click', closeSlideMenu);
+          overlay.addEventListener('click', closeSlideMenu);
+      
+          window.addEventListener('click', function (e) {
+            if (
+              !slideMenu.contains(e.target) &&
+              !burgerBtn.contains(e.target) &&
+              !overlay.contains(e.target)
+            ) {
+              closeSlideMenu();
+            }
+          });
+        });
+      </script>
 </body>
 </html>
