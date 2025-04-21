@@ -41,8 +41,17 @@
     color: #07f;
 }
 
+#header .buger {
+    background: url("img/set_gnb\ \(2\)\ \(1\).png") no-repeat top;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+}
+
 #header .header_buger a {
-    display: block;
+    display: flex;
+    gap: 6px;
     padding: 23px 23px 21px;
     font-size: 17px;
     font-weight: 500;
@@ -886,24 +895,27 @@
 
 #footer .youtube {
     display: inline-block;
-    background: url("/img/ico_community_youtube.svg");
-    height: 20px;
-    width: 20px;
+    background: url("img/set_footer-removebg-preview\ \(1\).png") no-repeat top;
+    background-color: #dde1e5;
+    height: 16px;
+    width: 21px;
 }
 
 #footer .twitter {
     display: inline-block;
-    background: url("/img/ico_community_x_footer.svg");
-    height: 20px;
-    width: 20px;
+    background: url("/NEXON/img/set_footer-removebg-preview\ \(2\).png") no-repeat top;
+    background-color: #dde1e5;
+    height: 15px;
+    width: 15px;
     margin-left: 8px;
 }
 
 #footer .facebook {
     display: inline-block;
-    background: url("/img/ico_community_facebook.svg");
-    height: 20px;
-    width: 20px;
+    background: url("img/set_footer-removebg-preview\ \(3\).png")no-repeat top;
+    background-color: #dde1e5;
+    height: 16px;
+    width: 8px;
     margin-left: 8px;
 }
 
@@ -1015,7 +1027,23 @@
     color: #737881;
 }
 
-#footer
+#footer .logo {
+    padding-bottom: 27px;
+}
+
+#footer .icon3 {
+    background: url("img/set_footer-removebg-preview\ \(4\).png") no-repeat top;
+    width: 96px;
+    height: 23px;
+    background-color: unset;
+    display: inline-block;
+    margin-left: 31px;
+    margin-top: 23px;
+}
+
+@media (max-width: 1402px) {
+
+}
 
 
 
