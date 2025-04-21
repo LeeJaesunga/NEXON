@@ -1236,15 +1236,17 @@
           const slideMenu = document.getElementById('slideMenu');
           const closeMenu = document.getElementById('closeMenu');
           const overlay = document.getElementById('overlay');
-      
+            console.log("event")
           // 메뉴 열기
           burgerBtn.addEventListener('click', function (e) {
             e.preventDefault();
+            console.log("event1")
             slideMenu.classList.add('active');
             overlay.classList.add('active');
           });
       
           function closeSlideMenu() {
+            console.log("event2")
             slideMenu.classList.remove('active');
             overlay.classList.remove('active');
           }
@@ -1252,15 +1254,15 @@
           closeMenu.addEventListener('click', closeSlideMenu);
           overlay.addEventListener('click', closeSlideMenu);
       
-          window.addEventListener('click', function (e) {
-            if (
-              !slideMenu.contains(e.target) &&
-              !burgerBtn.contains(e.target) &&
-              !overlay.contains(e.target)
-            ) {
-              closeSlideMenu();
-            }
-          });
+        //   window.addEventListener('click', function (e) {
+        //     if (
+        //       !slideMenu.contains(e.target) &&
+        //       !burgerBtn.contains(e.target) &&
+        //       !overlay.contains(e.target)
+        //     ) {
+        //       closeSlideMenu();
+        //     }
+        //   });
         });
       </script>
 </body>

@@ -74,12 +74,11 @@
 .slide_menu {
     position: fixed;
     top: 0;
-    left: -300px; /* 왼쪽에 숨겨진 상태 */
+    left: -9999px;
     width: 400px;
     height: 100%;
-    left: 0;
     width: 440px;
-    /* padding: 62px 0 195px; */
+    padding: 62px 0 195px;
     background-color: #f9f9f9;
     box-shadow: 2px 0 8px rgba(0,0,0,0.2);
     transition: left 0.3s ease;
