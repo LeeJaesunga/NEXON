@@ -75,9 +75,8 @@
     position: fixed;
     top: 0;
     left: -9999px;
-    width: 400px;
     height: 100%;
-    width: 440px;
+    width: 419px;
     padding: 62px 0 195px;
     background-color: #f9f9f9;
     box-shadow: 2px 0 8px rgba(0,0,0,0.2);
@@ -90,7 +89,77 @@
   }
 
   .menu_content {
-    padding: 20px;
+    position: relative;
+    height: 100%;
+    border-top: 1px solid #dde1e5;
+  }
+
+  .menu_content2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+
+  .menu_content3 {
+    height: 75px;
+    padding-top: 27px;
+  }
+
+  .menu_content3 ul {
+    display: inline-block;
+    width: 243px;
+    padding: 9px 0 0 42px;
+  }
+
+  .menu_content3 ul li {
+    height: 20px;
+    border-bottom: 2px solid #17191d;
+    display: inline-block;
+  }
+
+  .menu_content3 a {
+    color: #17191d;
+    font-size: 13px;
+    font-weight: 900;
+  }
+
+  .menu_content3 .Service {
+    display: inline-block;
+    width: 80px;
+    height: 23px;
+    padding-top: 4px;
+    color: #9fa1a7;
+    text-align: center;
+    font-weight: 500;
+    border: 2px solid #9fa1a7;
+  }
+
+  .menu_content4 {
+    display: block;
+    margin-top: -93px;
+    margin-left: 37px;
+  }
+
+  .menu_content4 h3 {
+    height: 30px;
+    padding-top: 36px;
+    color: #17191d;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .ghbcell li {
+    min-height: 20px;
+    padding-bottom: 8px;
+  }
+
+  .ghbcell a {
+    color: #737881;
+    letter-spacing: -.3px;
   }
 
 
