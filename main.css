@@ -142,6 +142,7 @@
     display: block;
     margin-top: -93px;
     margin-left: 37px;
+    margin-bottom: 230px;
   }
 
   .menu_content4 h3 {
@@ -150,6 +151,15 @@
     color: #17191d;
     font-size: 12px;
     font-weight: bold;
+  }
+
+  .all_ghbcell {
+    display: flex;
+    width: 100%;
+  }
+
+  .ghbcell {
+    width: 165px;
   }
 
   .ghbcell li {
@@ -162,6 +172,35 @@
     letter-spacing: -.3px;
   }
 
+  .scroll {
+    display: block;
+    width: 6px;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -82px;
+    margin: 6px;
+  }
+
+  /* .scroll_bottmo {
+    height: 526px;
+    background: #dde1e5;
+    position: relative;
+    width: 6px;
+    margin: 0;
+    border-radius: 3px;
+  } */
+
+  .Scoll_page {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 419px;
+    height: 225px;
+    background-color: #222426;
+    overflow: hidden;
+  }
 
 /* overlay */
 
