@@ -98,7 +98,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0;
+    bottom: 55px;
     left: 0;
     overflow: scroll;
     overflow-x: hidden;
@@ -162,6 +162,10 @@
     width: 165px;
   }
 
+  .ghbcell a:hover {
+    color: #07f;
+  }
+
   .ghbcell li {
     min-height: 20px;
     padding-bottom: 8px;
@@ -197,9 +201,43 @@
     left: 0;
     bottom: 0;
     width: 419px;
-    height: 225px;
+    height: 275px;
     background-color: #222426;
     overflow: hidden;
+  }
+
+  .Scoll_page ul {
+    height: 140px;
+    padding: 24px 0px 0px 33px;
+  }
+
+  .Scoll_page ul li {
+    display: inline-block;
+    zoom: 1;
+    width: 99px;
+    height: 35px;
+    padding-left: 15px;
+  }
+
+  .Scoll_page ul li a {
+    color: #fff;
+  }
+
+  .Scoll_page ul li a:hover {
+    color: #07f;
+  }
+
+  .gnb_all {
+    display: block;
+    width: 440px;
+    height: 31px;
+    padding-top: 17px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -.3px;
+    color: #fff;
+    background-color: #17191d;
   }
 
 /* overlay */
@@ -315,7 +353,7 @@
 
 #main .popular_game {
     position: relative;
-    width: 954px;
+    width: 1280px;
     height: 496px;
     margin: 76px auto 0;
 }
@@ -362,14 +400,14 @@
 
 #main .regame {
     float: left;
-    /* width: 644px; */
+    width: 644px;
     height: 342px;
     margin-top: 10px;
 }
 
 #main .swiper_wrapper2 {
-    box-sizing: border-box;
-    max-width: 473px;
+   box-sizing: border-box;
+    max-width: 639px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -439,7 +477,7 @@
 #main .game_btn1 {
     position: absolute;
     top: 11%;
-    left: 407px;
+   left: 570px;
     width: 27px;
     height: 26px;
     padding: 2px;
@@ -449,11 +487,22 @@
 #main .game_btn2 {
     position: absolute;
     top: 11%;
-    left: 440px;
+   left: 602px;
     width: 27px;
     height: 26px;
     padding: 2px;
     border: 1px solid #9fa1a7;
+}
+
+#main .plcc_banner {
+    float: left;
+    width: 154px;
+    height: 352px; 
+}
+
+#main .plcc_banner2 {
+    margin-top: 10px;
+    margin-right: 8px;
 }
 
 #main .login {
@@ -556,7 +605,7 @@
 }
 
 #main .new_game {
-    width: 954px;
+    width: 1328px;
     height: 300px;
     margin: 0 auto;
     margin-top: 32px;
@@ -711,7 +760,7 @@
 
 #main .allgame {
     position: relative;
-    width: 1002px;
+   width: 1328px;
     padding-left: 24px;
     margin: 0 auto;
 }
@@ -893,7 +942,7 @@
 
 #main .filter span {
     display: inline-block;
-    margin: 0 -2px 17px 0;
+   margin: 0px 16px 17px 0;
 }
 
 #main .filter span label {
@@ -1207,6 +1256,36 @@
 
 @media (max-width: 1402px) {
 
+    #main .popular_game {
+        width: 954px;
+    }
+
+    #main .regame {
+      width: 473px;
+    }
+
+    #main .game_btn1 {
+      top: 11%;
+      left: 407px;
+    }
+
+    #main .game_btn2 {
+        position: absolute;
+        top: 11%;
+        left: 440px;
+ }
+
+     #main .plcc_banner {
+        display: none;
+     }
+
+     #main .new_game {
+         width: 954px;
+     }
+
+     #main .allgame {
+        width: 1002px;
+     }
 }
 
 
