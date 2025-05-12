@@ -336,7 +336,7 @@
 }
 
 #main .swiper_wrapper {
-    height: 446px;
+   height: 451px;
     /* transition-duration: 0ms; */
 }
 
@@ -355,7 +355,7 @@
     background-image: url("../NEXON/img/homebanner_image_nxplay.png");
     background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto 100%;
 }
 
 #main .popular_game {
