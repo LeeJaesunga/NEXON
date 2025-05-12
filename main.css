@@ -336,19 +336,26 @@
 }
 
 #main .swiper_wrapper {
-    height: 394px;
-    transition-duration: 0ms;
+    height: 446px;
+    /* transition-duration: 0ms; */
 }
 
 #main .swiper_side {
-    width: 1347px;
+    height: 100%;
     opacity: 1;
     transform: translate3d(0px, 0px, 0px);
     transition-duration: 0ms;
 }
 
 #main .swiper_img {
-    background: url("/img/KlTq09181411232.jpg");
+    position: relative;
+    min-width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url("../NEXON/img/homebanner_image_nxplay.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #main .popular_game {
