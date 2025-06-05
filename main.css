@@ -383,7 +383,7 @@
     margin: 0 auto;
     position: relative;
     aspect-ratio: 16 / 9;
-     pointer-events: none; /* 클릭 무효화 */
+     pointer-events: none;
 }
 
 .videoWrapper iframe {
