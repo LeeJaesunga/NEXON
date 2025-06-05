@@ -176,9 +176,16 @@
 
                             </div>
 
-                              <div class="swiper_side_2">
+                              <div class="swiper_side_3">
                                 <a href="#">
-                                    <div class="swiper_img_2"></div>
+                                    <div class="swiper_img_3"></div>
+                                </a>
+                            </div>
+
+                            
+                              <div class="swiper_side_3">
+                                <a href="#">
+                                    <div class="swiper_img_3"></div>
                                 </a>
                             </div>
                         </div>
@@ -1353,8 +1360,7 @@
 
                     </div>
     </div>
-    <script>
-document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
   // --- 슬라이드 메뉴 ---
   const burgerBtn = document.getElementById('burgerBtn');
   const slideMenu = document.getElementById('slideMenu');
@@ -1388,7 +1394,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // --- 게임 리스트 하나씩 넘기기 ---
   const items = document.querySelectorAll("#main .swiper_wrapper2 ul li");
-  const visibleCount = 4; 
+  const visibleCount = 4;
   let startIndex = 0;
 
   function renderItems() {
@@ -1413,32 +1419,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
   renderItems();
 
-  
-  const side1 = document.querySelector('#main .swiper_side');
-  const side2 = document.querySelector('#main .swiper_side_2');
-  let currentSlide = 1;
+  // --- 슬라이드 자동 전환 (3개) ---
+  const slides = [
+    document.querySelector('#main .swiper_side'),
+    document.querySelector('#main .swiper_side_2'),
+    ...document.querySelectorAll('#main .swiper_side_3')
+  ].filter(Boolean); // null 방지
+
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.opacity = i === index ? '1' : '0';
+      slide.style.zIndex = i === index ? '2' : '1';
+    });
+  }
+
+  showSlide(currentSlide);
 
   setInterval(() => {
-    if (!side1 || !side2) return;
-
-    if (currentSlide === 1) {
-    
-      side1.style.opacity = '0';
-      side1.style.zIndex = '1';
-      side2.style.opacity = '1';
-      side2.style.zIndex = '2';
-      currentSlide = 2;
-    } else {
-     
-      side1.style.opacity = '1';
-      side1.style.zIndex = '2';
-      side2.style.opacity = '0';
-      side2.style.zIndex = '1';
-      currentSlide = 1;
-    }
-  }, 5000); 
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }, 5000);
 });
-</script>
+
 
 
 

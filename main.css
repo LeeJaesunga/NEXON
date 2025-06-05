@@ -434,6 +434,35 @@
     background-size: auto 100%; */
 }
 
+#main .swiper_side_3 {
+    display: block;
+    height: 100%;
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+    transition-duration: 0ms;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+    opacity: 0;
+}
+
+#main .swiper_img_3 {
+    background-image: url("../NEXON/img/Q8KO04185746808.jpg");
+    position: relative;
+    min-width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+    /* opacity: 0; */
+    /* background-position: top;
+    background-repeat: no-repeat;
+    background-size: auto 100%; */
+}
+
 #main .popular_game {
     position: relative;
     width: 1280px;
