@@ -175,6 +175,12 @@
                                 </div>
 
                             </div>
+
+                              <div class="swiper_side_2">
+                                <a href="#">
+                                    <div class="swiper_img_2"></div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1406,8 +1412,34 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   renderItems();
+
+  
+  const side1 = document.querySelector('#main .swiper_side');
+  const side2 = document.querySelector('#main .swiper_side_2');
+  let currentSlide = 1;
+
+  setInterval(() => {
+    if (!side1 || !side2) return;
+
+    if (currentSlide === 1) {
+    
+      side1.style.opacity = '0';
+      side1.style.zIndex = '1';
+      side2.style.opacity = '1';
+      side2.style.zIndex = '2';
+      currentSlide = 2;
+    } else {
+     
+      side1.style.opacity = '1';
+      side1.style.zIndex = '2';
+      side2.style.opacity = '0';
+      side2.style.zIndex = '1';
+      currentSlide = 1;
+    }
+  }, 5000); 
 });
 </script>
+
 
 
 </body>
