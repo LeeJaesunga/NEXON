@@ -176,9 +176,9 @@
 
                             </div>
 
-                              <div class="swiper_side_3">
+                              <div class="swiper_side_2">
                                 <a href="#">
-                                    <div class="swiper_img_3"></div>
+                                    <div class="swiper_img_2"></div>
                                 </a>
                             </div>
 
@@ -1360,7 +1360,8 @@
 
                     </div>
     </div>
-    document.addEventListener('DOMContentLoaded', function () {
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
   // --- 슬라이드 메뉴 ---
   const burgerBtn = document.getElementById('burgerBtn');
   const slideMenu = document.getElementById('slideMenu');
@@ -1429,11 +1430,14 @@
   let currentSlide = 0;
 
   function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.style.opacity = i === index ? '1' : '0';
-      slide.style.zIndex = i === index ? '2' : '1';
-    });
-  }
+  slides.forEach((slide, i) => {
+    if (i === index) {
+      slide.classList.add('active');
+    } else {
+      slide.classList.remove('active');
+    }
+  });
+}
 
   showSlide(currentSlide);
 
@@ -1442,7 +1446,7 @@
     showSlide(currentSlide);
   }, 5000);
 });
-
+</script>
 
 
 

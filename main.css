@@ -343,18 +343,16 @@
 }
 
 #main .swiper_side {
-    height: 100%;
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
-    transition-duration: 0ms;
-     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    z-index: 2;
-  opacity: 1;
+   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: translate3d(0px, 0px, 0px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  z-index: 1;
 }
 
 #main .swiper_img {
@@ -385,6 +383,11 @@
     margin: 0 auto;
     position: relative;
     aspect-ratio: 16 / 9;
+     pointer-events: none; /* 클릭 무효화 */
+}
+
+.videoWrapper iframe {
+  pointer-events: none;
 }
 
 .youtubeFrame {
@@ -406,20 +409,16 @@
 }
 
 #main .swiper_side_2 {
-    display: block;
-    height: 100%;
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
-    transition-duration: 0ms;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    z-index: 1;
-    opacity: 0;
+   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: translate3d(0px, 0px, 0px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  z-index: 1;
 }
 
 #main .swiper_img_2 {
@@ -435,21 +434,19 @@
 }
 
 #main .swiper_side_3 {
-    display: block;
-    height: 100%;
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
-    transition-duration: 0ms;
-    overflow: hidden;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    z-index: 1;
-    opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: translate3d(0px, 0px, 0px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  z-index: 1;
 }
+
+
 
 #main .swiper_img_3 {
     background-image: url("../NEXON/img/Q8KO04185746808.jpg");
@@ -461,6 +458,13 @@
     /* background-position: top;
     background-repeat: no-repeat;
     background-size: auto 100%; */
+}
+
+#main .swiper_side.active,
+#main .swiper_side_2.active,
+#main .swiper_side_3.active {
+  opacity: 1;
+  z-index: 2;
 }
 
 #main .popular_game {
